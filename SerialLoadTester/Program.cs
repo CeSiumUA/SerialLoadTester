@@ -1,8 +1,11 @@
-﻿using System.IO.Ports;
+﻿using SerialLoadTester;
+using System.IO.Ports;
 using System.Security.Cryptography;
 
 const int DefaultBaudRate = 115200;
 const int DefaultTestsCount = 10;
+
+var cmdParser = new CmdParser(args);
 
 Console.WriteLine("Serial ports:");
 
@@ -27,7 +30,18 @@ int baudRate;
 
 Console.Write($"Enter baudrate (default: {DefaultBaudRate}): ");
 
-if(!int.TryParse(Console.ReadLine(), out baudRate))
+var bdCmdOption = cmdParser.GetOption("b");
+
+if (string.IsNullOrEmpty(bdCmdOption))
+{
+    bdCmdOption = Console.ReadLine();
+}
+else
+{
+    Console.WriteLine($"{bdCmdOption}");
+}
+
+if(!int.TryParse(bdCmdOption, out baudRate))
 {
     baudRate = DefaultBaudRate;
 }
@@ -36,7 +50,17 @@ int testsCount;
 
 Console.Write($"Enter number of tests (default: {DefaultTestsCount}):");
 
-if(!int.TryParse(Console.ReadLine(), out testsCount))
+var tcCmdOption = cmdParser.GetOption("t");
+if (string.IsNullOrEmpty(tcCmdOption))
+{
+    tcCmdOption = Console.ReadLine();
+}
+else
+{
+    Console.WriteLine($"{tcCmdOption}");
+}
+
+if(!int.TryParse(tcCmdOption, out testsCount))
 {
     testsCount = DefaultTestsCount;
 }
