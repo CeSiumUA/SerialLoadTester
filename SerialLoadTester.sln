@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialLoadTester", "SerialLoadTester\SerialLoadTester.csproj", "{FAAEE061-ADD8-415A-BEDA-9090C1903F16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAAEE061-ADD8-415A-BEDA-9090C1903F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAEE061-ADD8-415A-BEDA-9090C1903F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAEE061-ADD8-415A-BEDA-9090C1903F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAAEE061-ADD8-415A-BEDA-9090C1903F16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CF91C2E-8EBC-41E6-B0B7-BE6D8FC6408D}
+	EndGlobalSection
+EndGlobal
